@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f5e1d5;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    position: relative;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff7043;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff5722;
+}
+
+.butterflies {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.butterfly {
+    width: 130px;
+    height: 130px;
+    background-image: url('butterfly.png'); /* Add the butterfly image file here */
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    animation: fly 12s linear infinite;
+    opacity: 0.8;
+}
+
+/* Positioning and animation settings for a full-screen effect */
+.butterfly:nth-child(1) { left: 5%; animation-duration: 6s; animation-delay: 0s; }
+.butterfly:nth-child(2) { left: 15%; animation-duration: 7s; animation-delay: 1s; }
+.butterfly:nth-child(3) { left: 25%; animation-duration: 8s; animation-delay: 2s; }
+.butterfly:nth-child(4) { left: 35%; animation-duration: 9s; animation-delay: 3s; }
+.butterfly:nth-child(5) { left: 45%; animation-duration: 10s; animation-delay: 4s; }
+.butterfly:nth-child(6) { left: 55%; animation-duration: 11s; animation-delay: 5s; }
+.butterfly:nth-child(7) { left: 65%; animation-duration: 12s; animation-delay: 6s; }
+.butterfly:nth-child(8) { left: 75%; animation-duration: 13s; animation-delay: 7s; }
+.butterfly:nth-child(9) { left: 85%; animation-duration: 9s; animation-delay: 8s; }
+.butterfly:nth-child(10) { left: 95%; animation-duration: 7s; animation-delay: 9s; }
+.butterfly:nth-child(11) { left: 10%; animation-duration: 14s; animation-delay: 2s; }
+.butterfly:nth-child(12) { left: 20%; animation-duration: 8s; animation-delay: 3s; }
+.butterfly:nth-child(13) { left: 30%; animation-duration: 15s; animation-delay: 1s; }
+.butterfly:nth-child(14) { left: 60%; animation-duration: 12s; animation-delay: 4s; }
+.butterfly:nth-child(15) { left: 90%; animation-duration: 10s; animation-delay: 5s; }
+
+@keyframes fly {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 0.6; }
+    50% { transform: translateY(-50vh) rotate(180deg); opacity: 1; }
+    100% { transform: translateY(-100vh) rotate(360deg); opacity: 0.6; }
+}
